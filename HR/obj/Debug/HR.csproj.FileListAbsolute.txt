@@ -1,0 +1,11 @@
+D:\Workspace\c#\HR\HR\bin\Debug\HR.exe.config
+D:\Workspace\c#\HR\HR\bin\Debug\HR.exe
+D:\Workspace\c#\HR\HR\bin\Debug\HR.pdb
+D:\Workspace\c#\HR\HR\obj\Debug\HR.csproj.AssemblyReference.cache
+D:\Workspace\c#\HR\HR\obj\Debug\HR.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Properties.Resources.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.csproj.GenerateResource.cache
+D:\Workspace\c#\HR\HR\obj\Debug\HR.csproj.CoreCompileInputs.cache
+D:\Workspace\c#\HR\HR\obj\Debug\HR.exe
+D:\Workspace\c#\HR\HR\obj\Debug\HR.pdb
+D:\Workspace\c#\HR\HR\obj\Debug\HR.fLogin.resources
