@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHide = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -127,6 +128,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel2.Controls.Add(this.btnHide);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -142,6 +144,21 @@
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 1;
             // 
+            // btnHide
+            // 
+            this.btnHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHide.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.btnHide.Location = new System.Drawing.Point(373, 0);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(40, 40);
+            this.btnHide.TabIndex = 6;
+            this.btnHide.Text = "-";
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -150,7 +167,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(195, 492);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(95, 13);
-            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "weHR@gmail.com";
             // 
@@ -186,7 +203,7 @@
             this.button2.Location = new System.Drawing.Point(15, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 25);
-            this.button2.TabIndex = 7;
+            this.button2.TabIndex = 3;
             this.button2.Text = "FORGET PASSWORD?";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -200,7 +217,7 @@
             this.button1.Location = new System.Drawing.Point(315, 326);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 34);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -223,7 +240,7 @@
             this.textBox2.Location = new System.Drawing.Point(55, 16);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(370, 17);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.TabIndex = 1;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.Click += new System.EventHandler(this.click_textbox2);
             // 
@@ -257,7 +274,7 @@
             this.textBox1.Location = new System.Drawing.Point(55, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(370, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.click_textbox1);
             // 
             // pictureBox2
@@ -290,7 +307,7 @@
             this.btnClose.Location = new System.Drawing.Point(410, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 40);
-            this.btnClose.TabIndex = 0;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -300,7 +317,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 530);
-            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -345,6 +361,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnHide;
     }
 }
 

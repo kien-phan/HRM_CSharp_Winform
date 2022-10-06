@@ -46,12 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fManager.Designer.cs">
+      <DependentUpon>fManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fHRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fHRM.Designer.cs">
+      <DependentUpon>fHRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fSalary.Designer.cs">
+      <DependentUpon>fSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fStatistic.Designer.cs">
+      <DependentUpon>fStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fTraining.Designer.cs">
+      <DependentUpon>fTraining.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="others\ThemeColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -62,6 +93,21 @@
     <Compile Include="RJControls\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="fManager.resx">
+      <DependentUpon>fManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fHRM.resx">
+      <DependentUpon>fHRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fSalary.resx">
+      <DependentUpon>fSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fStatistic.resx">
+      <DependentUpon>fStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fTraining.resx">
+      <DependentUpon>fTraining.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +137,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\male_user_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\get_cash_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\training_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_30px.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -63,6 +63,26 @@ namespace HR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combo_chart_30px {
+            get {
+                object obj = ResourceManager.GetObject("combo_chart_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap get_cash_30px {
+            get {
+                object obj = ResourceManager.GetObject("get_cash_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hourglass_120px {
             get {
                 object obj = ResourceManager.GetObject("hourglass_120px", resourceCulture);
@@ -86,6 +106,26 @@ namespace HR.Properties {
         internal static System.Drawing.Bitmap password_24px {
             get {
                 object obj = ResourceManager.GetObject("password_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap people_30px {
+            get {
+                object obj = ResourceManager.GetObject("people_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap training_30px {
+            get {
+                object obj = ResourceManager.GetObject("training_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

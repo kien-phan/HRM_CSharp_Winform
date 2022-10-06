@@ -9,3 +9,8 @@ D:\Workspace\c#\HR\HR\obj\Debug\HR.csproj.CoreCompileInputs.cache
 D:\Workspace\c#\HR\HR\obj\Debug\HR.exe
 D:\Workspace\c#\HR\HR\obj\Debug\HR.pdb
 D:\Workspace\c#\HR\HR\obj\Debug\HR.fLogin.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.fManager.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fHRM.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fSalary.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fStatistic.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fTraining.resources

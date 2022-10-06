@@ -55,6 +55,11 @@ namespace HR
                 e.Cancel = true;
             }
         }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
 /*
