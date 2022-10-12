@@ -88,7 +88,7 @@
             this.btn_user_option.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_user_option.Size = new System.Drawing.Size(220, 60);
             this.btn_user_option.TabIndex = 3;
-            this.btn_user_option.Text = "  Quản lý nhân sự";
+            this.btn_user_option.Text = "  Welcome user";
             this.btn_user_option.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_user_option.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_user_option.UseVisualStyleBackColor = true;

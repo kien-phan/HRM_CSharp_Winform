@@ -227,7 +227,6 @@ namespace HR
 
         private void btn_user_option_logOut_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
         }
     }
 }
