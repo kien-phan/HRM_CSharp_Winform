@@ -40,12 +40,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txb_password = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txb_username = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -133,7 +133,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label5);
@@ -207,42 +207,43 @@
             this.button2.Text = "FORGET PASSWORD?";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(315, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(315, 326);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(110, 34);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txb_password);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(0, 243);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 45);
             this.panel4.TabIndex = 5;
             // 
-            // textBox2
+            // txb_password
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.textBox2.Location = new System.Drawing.Point(55, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(370, 17);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
-            this.textBox2.Click += new System.EventHandler(this.click_textbox2);
+            this.txb_password.BackColor = System.Drawing.SystemColors.Menu;
+            this.txb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txb_password.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_password.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txb_password.Location = new System.Drawing.Point(55, 16);
+            this.txb_password.Name = "txb_password";
+            this.txb_password.Size = new System.Drawing.Size(370, 17);
+            this.txb_password.TabIndex = 1;
+            this.txb_password.UseSystemPasswordChar = true;
+            this.txb_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_password_KeyPress);
             // 
             // pictureBox3
             // 
@@ -258,24 +259,23 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txb_username);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Location = new System.Drawing.Point(0, 185);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 45);
             this.panel3.TabIndex = 4;
             // 
-            // textBox1
+            // txb_username
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.textBox1.Location = new System.Drawing.Point(55, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Click += new System.EventHandler(this.click_textbox1);
+            this.txb_username.BackColor = System.Drawing.SystemColors.Menu;
+            this.txb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txb_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_username.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txb_username.Location = new System.Drawing.Point(55, 13);
+            this.txb_username.Name = "txb_username";
+            this.txb_username.Size = new System.Drawing.Size(370, 20);
+            this.txb_username.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -353,9 +353,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txb_username;
+        private System.Windows.Forms.TextBox txb_password;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,15 @@ namespace HR
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
+
+            //CONTROL FORM
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            //drop down user menu
+            customDesign();
         }
 
 
@@ -60,6 +70,8 @@ namespace HR
 
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+
+                    btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -77,6 +89,8 @@ namespace HR
             }
         }
 
+
+        //CLICK BTN SIDEBAR
         private void btn_hrm_Click(object sender, EventArgs e)
         {
             openChildForm(new Forms.fHRM(), sender);
@@ -92,14 +106,41 @@ namespace HR
             openChildForm(new Forms.fTraining(), sender);
         }
 
+        private void btn_setting_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Forms.fSetting(), sender);
+        }
+
+
+
+        //CLOSE BTN
         private void btn_statistic_Click(object sender, EventArgs e)
         {
             openChildForm(new Forms.fStatistic(), sender);
         }
 
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                Reset();
+            }
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lbTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.DarkSlateGray;
+            panelLogo.BackColor = Color.FromArgb(60, 90, 90);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
+        }
+
         #endregion
 
-
+        //FORM CONTROL
         public void openChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -117,7 +158,76 @@ namespace HR
             childForm.BringToFront();
             childForm.Show();
 
-            lbTitle.Text = childForm.Text;
+            lbTitle.Text = (btnSender as Button).Text;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState |= FormWindowState.Minimized;
+        }
+
+        //DROP DOWN MENU
+        private void customDesign()
+        {
+            panel_user_container.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (panel_user_container.Visible == true)
+            {
+                panel_user_container.Visible = false;
+            }
+        }
+        private void showMenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                hideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+        private void btn_user_option_Click(object sender, EventArgs e)
+        {
+            showMenu(panel_user_container);
+        }
+
+        private void btn_user_option_logOut_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }

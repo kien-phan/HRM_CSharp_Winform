@@ -14,3 +14,4 @@ D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fHRM.resources
 D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fSalary.resources
 D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fStatistic.resources
 D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fTraining.resources
+D:\Workspace\c#\HR\HR\obj\Debug\HR.Forms.fSetting.resources

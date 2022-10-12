@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HR.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,32 +16,34 @@ namespace HR
         public fLogin()
         {
             InitializeComponent();
+            txb_username.GotFocus += txb_username_focus;
+            txb_password.GotFocus += txb_password_focus;
         }
 
-        private void click_textbox1(object sender, EventArgs e)
+        private void txb_username_focus(object sender, EventArgs e)
         {
-            textBox1.BackColor = Color.White;
+            txb_username.BackColor = Color.White;
             panel3.BackColor = Color.White;
             panel4.BackColor = SystemColors.Control;
-            textBox2.BackColor = SystemColors.Control;
+            txb_password.BackColor = SystemColors.Control;
         }
 
-        private void click_textbox2(object sender, EventArgs e)
+        private void txb_password_focus(object sender, EventArgs e)
         {
-            textBox2.BackColor = Color.White;
+            txb_password.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
-            textBox1.BackColor = SystemColors.Control;
+            txb_username.BackColor = SystemColors.Control;
         }
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false;
+            txb_password.UseSystemPasswordChar = false;
         }
 
         private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = true;
+            txb_password.UseSystemPasswordChar = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -59,6 +62,35 @@ namespace HR
         private void btnHide_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txb_username.Text;
+            string password = txb_password.Text;
+            if (login(username,password))
+            {
+                fManager fManager = new fManager();
+                this.Hide();
+                fManager.ShowDialog();
+                this.Show();
+            } else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
+            }
+        }
+
+        bool login(string username, string password)
+        {
+            return AccountDAO.Instance.Login(username, password);
+        }
+
+        private void txb_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }

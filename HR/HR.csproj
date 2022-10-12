@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="fManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +65,12 @@
     </Compile>
     <Compile Include="Forms\fSalary.Designer.cs">
       <DependentUpon>fSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fSetting.Designer.cs">
+      <DependentUpon>fSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\fStatistic.cs">
       <SubType>Form</SubType>
@@ -101,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fSalary.resx">
       <DependentUpon>fSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fSetting.resx">
+      <DependentUpon>fSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fStatistic.resx">
       <DependentUpon>fStatistic.cs</DependentUpon>
@@ -150,6 +161,24 @@
   <ItemGroup>
     <None Include="Resources\combo_chart_30px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\close_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+    <Folder Include="Forms\subForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_info_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_info_30px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
